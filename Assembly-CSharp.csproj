@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\FlyCamera.cs" />
+     <Compile Include="Assets\Scripts\MoonMovement.cs" />
+     <Compile Include="Assets\Scripts\PlanetMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\StarField.cs" />
