@@ -1,31 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float speed = 7;
-    private Rigidbody rb;
-
-    #region MonoBehaviour API
-
-    private void start()
-    {
-        rb = GetComponent <Rigidbody>();
-    }
-
     // Update is called once per frame
-    void FixedUpdate () {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 300.0f;
+    void Update () {
 
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
+        //translation
+        float x = Input.GetAxis("Lateral") * Time.deltaTime * 100.0f;
+        float y = Input.GetAxis("Vertical") * Time.deltaTime * 100.0f;
+        float z = Input.GetAxis("Thrust") * Time.deltaTime * 120.0f;
+        transform.Translate(x, y, z);
 
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        //rotation
+        if(!Input.GetMouseButton(1)) {
+          float pitch = Input.GetAxis("Pitch") * Time.deltaTime * 15.0f;
+          float yaw = Input.GetAxis("Yaw") * Time.deltaTime * 60.0f;
+          float roll = Input.GetAxis("Roll") * Time.deltaTime * 15.0f;
+          transform.Rotate(pitch, yaw, -roll);
+        }
 
-        rb.AddForce(movement * speed);
     }
 
-    #endregion
 }
