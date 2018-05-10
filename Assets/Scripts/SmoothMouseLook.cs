@@ -50,8 +50,8 @@ public class SmoothMouseLook : MonoBehaviour
                 rotAverageY = 0f;
                 rotAverageX = 0f;
 
-                rotationY += Input.GetAxis("Pitch") * sensitivityY;
-                rotationX += Input.GetAxis("Roll") * sensitivityX;
+                rotationY += Input.GetAxis("Vertical") * sensitivityY;
+                rotationX += Input.GetAxis("Horizontal") * sensitivityX;
 
                 rotArrayY.Add(rotationY);
                 rotArrayX.Add(rotationX);
@@ -89,7 +89,7 @@ public class SmoothMouseLook : MonoBehaviour
             {
                 rotAverageX = 0f;
 
-                rotationX += Input.GetAxis("Roll") * sensitivityX;
+                rotationX += Input.GetAxis("Horizontal") * sensitivityX;
 
                 rotArrayX.Add(rotationX);
 
@@ -112,7 +112,7 @@ public class SmoothMouseLook : MonoBehaviour
             {
                 rotAverageY = 0f;
 
-                rotationY += Input.GetAxis("Pitch") * sensitivityY;
+                rotationY += Input.GetAxis("Vertical") * sensitivityY;
 
                 rotArrayY.Add(rotationY);
 
@@ -138,8 +138,8 @@ public class SmoothMouseLook : MonoBehaviour
             rotationX = 0;
             transform.localRotation = originalRotation;
 
-            rotationY += Input.GetAxis("Pitch") * sensitivityY;
-            rotationX += Input.GetAxis("Roll") * sensitivityX;
+            rotationY += Input.GetAxis("Vertical") * sensitivityY;
+            rotationX += Input.GetAxis("Horizontal") * sensitivityX;
 
             rotArrayY.Add(rotationY);
             rotArrayX.Add(rotationX);
