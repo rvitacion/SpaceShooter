@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HideCursor : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class HideCursor : MonoBehaviour {
 	}
 
   void Update() {
-    if(Input.GetKey(KeyCode.Escape)) Application.Quit();
+    if(Input.GetKey(KeyCode.Escape)) {
+      SceneManager.LoadScene(0);
+    }
   }
 }
