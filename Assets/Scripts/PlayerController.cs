@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour {
 
         //rotation
         if(!Input.GetMouseButton(1)) {
-          float pitch = Input.GetAxis("Vertical") * Time.deltaTime * 15.0f;
-          float yaw = Input.GetAxis("Yaw") * Time.deltaTime * 60.0f;
-          float roll = Input.GetAxis("Horizontal") * Time.deltaTime * 15.0f;
+          float pitch = Input.GetAxis("Vertical") * Time.deltaTime * 10.0f;
+          float yaw = Input.GetAxis("Yaw") * Time.deltaTime * 10.0f;
+          float roll = Input.GetAxis("Horizontal") * Time.deltaTime * 160.0f;
           transform.Rotate(pitch, yaw, -roll);
         }
 
