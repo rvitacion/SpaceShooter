@@ -6,16 +6,16 @@ public class PlayerController : MonoBehaviour {
     void Update () {
 
         //translation
-        float x = Input.GetAxis("Lateral") * Time.deltaTime * 100.0f;
-        float y = Input.GetAxis("UpDown") * Time.deltaTime * 100.0f;
-        float z = Input.GetAxis("Thrust") * Time.deltaTime * 120.0f;
+        float x = Input.GetAxis("Horizontal") * Time.deltaTime * 800.0f;
+        float y = Input.GetAxis("Vertical") * Time.deltaTime * 800.0f;
+        float z = Input.GetAxis("Thrust") * Time.deltaTime * 1000.0f;
         transform.Translate(x, y, z);
 
         //rotation
         if(!Input.GetMouseButton(1)) {
-          float pitch = Input.GetAxis("Vertical") * Time.deltaTime * 10.0f;
+          float pitch = Input.GetAxis("Pitch") * Time.deltaTime * 10.0f;
           float yaw = Input.GetAxis("Yaw") * Time.deltaTime * 10.0f;
-          float roll = Input.GetAxis("Horizontal") * Time.deltaTime * 160.0f;
+          float roll = Input.GetAxis("Roll") * Time.deltaTime * 160.0f;
           transform.Rotate(pitch, yaw, -roll);
         }
 
