@@ -6,7 +6,7 @@ Gerardo Rodriguez
 Ryan Vitacion  
 May 10, 2018  
 
-SpaceShooter is a stylized 3D combat spaceflight game written in Unity3D.
+SpaceShooter is a simple 3D combat spaceflight game written in Unity3D.
 
 ## TIPS
 * Laser cannons are fully automatic, hold left click to fire.
